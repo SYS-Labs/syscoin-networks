@@ -1,0 +1,15 @@
+{
+  "name": "syscoin-networks",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "4.6.4"
+  },
+  "dependencies": {
+    "bitcoinjs-lib": "^6.0.1",
+    "ethers": "legacy-v5"
+  }
+}
