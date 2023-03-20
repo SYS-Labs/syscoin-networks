@@ -1,12 +1,14 @@
-import { ethers } from "ethers";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ethers_1 = require("ethers");
 var contractsDev = {
     l1_dev: {
         AddressManager: '0xf2ad472ade2009Ef5eeb26B7fe27BA9fd27dE46A',
         L1CrossDomainMessenger: '0x51ac8093D762BBD17C8d898634916dAc14e1BCC1',
         L1StandardBridge: '0x39CadECd381928F1330D1B2c13c8CAC358Dce65A',
-        StateCommitmentChain: ethers.constants.AddressZero,
-        CanonicalTransactionChain: ethers.constants.AddressZero,
-        BondManager: ethers.constants.AddressZero,
+        StateCommitmentChain: ethers_1.ethers.constants.AddressZero,
+        CanonicalTransactionChain: ethers_1.ethers.constants.AddressZero,
+        BondManager: ethers_1.ethers.constants.AddressZero,
         OptimismPortal: '0x61200B9fcBB421aFD0Bb5A732fe48ec98482E39C',
         L2OutputOracle: '0x63D297aa3feCbf6eEdE0aCd15B0308B9C8379afb',
     },
@@ -31,4 +33,4 @@ var contractsDev = {
         L1FeeVault: '0x420000000000000000000000000000000000001a',
     },
 };
-export default contractsDev;
+exports.default = contractsDev;

@@ -1,9 +1,15 @@
-import contractsDev from "./contracts";
-export var networksMap = {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getNetworkByName = exports.getNetworkByChainId = exports.networks = exports.networksMap = void 0;
+var contracts_1 = __importDefault(require("./contracts"));
+exports.networksMap = {
     'L1Dev': 'RolluxBedrockDev',
     'RolluxBedrockDev': 'L1Dev'
 };
-export var networks = {
+exports.networks = {
     L1: {
         rpcAddress: 'https://rpc.tanenbaum.io',
         name: 'sysNeVM',
@@ -18,7 +24,7 @@ export var networks = {
         explorerUrl: 'https://tanenbaum.io',
         chainId: 5700,
         layer: 1,
-        contracts: contractsDev.l1_dev,
+        contracts: contracts_1.default.l1_dev,
     },
     L2Dev: {
         rpcAddress: 'https://rpc-bedrock.rollux.com/',
@@ -26,10 +32,10 @@ export var networks = {
         explorerUrl: 'https://explorer.testnet.rollux.com',
         chainId: 57000,
         layer: 2,
-        contracts: contractsDev.l2_dev,
+        contracts: contracts_1.default.l2_dev,
     }
 };
-export var getNetworkByChainId = function (chainId, networks) {
+var getNetworkByChainId = function (chainId, networks) {
     var found = undefined;
     Object.keys(networks).forEach(function (element) {
         var network = networks[element];
@@ -39,7 +45,8 @@ export var getNetworkByChainId = function (chainId, networks) {
     });
     return found;
 };
-export var getNetworkByName = function (name, networks) {
+exports.getNetworkByChainId = getNetworkByChainId;
+var getNetworkByName = function (name, networks) {
     var found = undefined;
     Object.keys(networks).forEach(function (element) {
         var network = networks[element];
@@ -49,3 +56,4 @@ export var getNetworkByName = function (name, networks) {
     });
     return found;
 };
+exports.getNetworkByName = getNetworkByName;
