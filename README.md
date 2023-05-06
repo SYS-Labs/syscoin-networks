@@ -7,7 +7,7 @@ This package provides a list of default smart contract addresses and official RP
 You can install Syscoin Networks via npm by running the following command:
 
 ```bash
-npm install syscoin-networks
+yarn add syscoin-networks@https://github.com/SYS-Labs/syscoin-networks
 ```
 
 ## Usage
