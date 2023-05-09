@@ -27,9 +27,9 @@ exports.networks = {
         contracts: contracts_1.default.l1_dev,
     },
     L2Dev: {
-        rpcAddress: 'https://rpc-bedrock.rollux.com/',
+        rpcAddress: 'https://rpc.ankr.com/rollux_testnet',
         name: 'RolluxBedrockDev',
-        explorerUrl: 'https://explorer.testnet.rollux.com',
+        explorerUrl: 'https://rollux.tanenbaum.io',
         chainId: 57000,
         layer: 2,
         contracts: contracts_1.default.l2_dev,
